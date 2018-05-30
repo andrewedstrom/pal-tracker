@@ -1,6 +1,7 @@
 plugins {
     id "org.jetbrains.kotlin.jvm" version "1.2.41"
-    id "org.springframework.boot" version "2.0.2.RELEASE"
+    id "org.springframework.boot" version "1.5.4.RELEASE"
+    id "org.jetbrains.kotlin.plugin.spring" version "1.2.41"
 }
 
 repositories {
@@ -8,8 +9,8 @@ repositories {
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web:2.0.2.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     compile("org.jetbrains.kotlin:kotlin-reflect")
-//     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
 }
