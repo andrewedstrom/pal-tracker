@@ -10,7 +10,7 @@ resources:
   type: git
   source:
     uri: ((blue-pal-tracker/Notes/github-repository))
-    branch: master
+    branch: blue
     private_key: ((blue-pal-tracker/Notes/github-private-key))
 
 - name: pal-tracker-artifacts
