@@ -17,7 +17,7 @@ resources:
   type: google-cloud-storage
   source:
     bucket: triage-pal-tracker
-    regexp: releases/pal-tracker-(.*).jar
+    regexp: blue/releases/pal-tracker-(.*).jar
     json_key: ((blue-pal-tracker/Notes/triage-pal-tracker-bucket-gcp-key))
 
 - name: version
