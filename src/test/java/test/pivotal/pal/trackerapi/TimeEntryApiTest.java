@@ -40,10 +40,10 @@ public class TimeEntryApiTest {
         dataSource.setUrl(System.getenv("SPRING_DATASOURCE_URL"));
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-        jdbcTemplate.execute("TRUNCATE time_entries");
+        jdbcTemplate.execute("DELETE FROM time_entries");
 
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
-    }
+    }`
 
     @Test
     public void testCreate() throws Exception {
