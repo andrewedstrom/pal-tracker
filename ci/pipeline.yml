@@ -77,10 +77,10 @@ jobs:
       CF_PASSWORD: ((PWS: App Deployment Account/Password))
       CF_ORG: Davos
       CF_SPACE: blue-review
-      MYSQL_IP: ((review-mysql-ip))
-      DATABASE_NAME: ((review-database-name))
-      DATABASE_USERNAME: ((review-database-username))
-      DATABASE_PASSWORD: ((review-database-password))
+      MYSQL_IP: ((blue-pal-tracker/Notes/review-mysql-ip))
+      DATABASE_NAME: ((blue-pal-tracker/Notes/review-database-name))
+      DATABASE_USERNAME: ((blue-pal-tracker/Notes/review-database-username))
+      DATABASE_PASSWORD: ((blue-pal-tracker/Notes/review-database-password))
   - put: review-deployment
     params:
       manifest: pal-tracker/manifest-review.yml
@@ -102,10 +102,10 @@ jobs:
       CF_PASSWORD: ((PWS: App Deployment Account/Password))
       CF_ORG: Davos
       CF_SPACE: blue
-      MYSQL_IP: ((prod-mysql-ip))
-      DATABASE_NAME: ((production-database-name))
-      DATABASE_USERNAME: ((production-database-username))
-      DATABASE_PASSWORD: ((production-database-password))
+      MYSQL_IP: ((blue-pal-tracker/Notes/prod-mysql-ip))
+      DATABASE_NAME: ((blue-pal-tracker/Notes/production-database-name))
+      DATABASE_USERNAME: ((blue-pal-tracker/Notes/production-database-username))
+      DATABASE_PASSWORD: ((blue-pal-tracker/Notes/production-database-password))
   - put: production-deployment
     params:
       manifest: pal-tracker/manifest-production.yml
