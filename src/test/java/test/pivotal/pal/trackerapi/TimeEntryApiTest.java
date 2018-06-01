@@ -43,7 +43,7 @@ public class TimeEntryApiTest {
         jdbcTemplate.execute("DELETE FROM time_entries");
 
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
-    }`
+    }
 
     @Test
     public void testCreate() throws Exception {
