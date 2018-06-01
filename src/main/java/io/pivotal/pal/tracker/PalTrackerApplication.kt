@@ -8,13 +8,14 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
+import javax.sql.DataSource
 
 
 @SpringBootApplication
 class PalTrackerApplication {
     @Bean
-    fun timeEntryRepository(): TimeEntryRepository {
-        return InMemoryTimeEntryRepository()
+    fun timeEntryRepository(dataSource: DataSource): TimeEntryRepository {
+        return JdbcTimeEntryRepository(dataSource)
     }
 
     @Bean
@@ -25,6 +26,7 @@ class PalTrackerApplication {
                 .modules(JavaTimeModule())
                 .build()
     }
+
 }
 
 fun main(args: Array<String>) {

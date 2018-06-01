@@ -11,7 +11,7 @@ class InMemoryTimeEntryRepository : TimeEntryRepository {
         return timeEntries[id]
     }
 
-    override fun create(timeEntry: TimeEntry): TimeEntry {
+    override fun create(timeEntry: TimeEntry): TimeEntry? {
         timeEntry.id = idCounter.incrementAndGet()
         timeEntries[timeEntry.id] = timeEntry
         return timeEntry
